@@ -1,0 +1,11 @@
+<library path="ros_bag_gui">
+  <class name="RosBagGui"
+         type="RosBagGui"
+         base_class_type="rviz_common::Panel">
+  </class>
+  <class name="FileSelector"
+         type="FileSelector"
+         base_class_type="rviz_common::Panel">
+  </class>
+</library>
+
