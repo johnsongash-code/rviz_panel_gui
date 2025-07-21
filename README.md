@@ -1,5 +1,5 @@
 # rviz_panel_gui
-Rviz panel gui for bag control, currently support arm64 and will add x86 soon.
+Rviz panel gui for bag control, currently support x86 and arm64.
 
 ![Example](example.png)
 
@@ -12,6 +12,7 @@ Rviz panel gui for bag control, currently support arm64 and will add x86 soon.
 ### Build Results
 | Step   | Status   |
 | ------ | -------- | 
+| x86  | ✅ Success | 
 | arm64  | ✅ Success | 
 
 ### Usage Example

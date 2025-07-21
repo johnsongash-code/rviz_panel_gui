@@ -46,8 +46,19 @@ install(
   RUNTIME DESTINATION bin
   INCLUDES DESTINATION include
 )
-install(FILES libfile_selector.so DESTINATION lib)
-install(FILES libros_bag_gui.so DESTINATION lib)
+
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(x86_64|AMD64)$")
+  message("Detected architecture: x86")
+  install(FILES x86/libfile_selector.so DESTINATION lib)
+  install(FILES x86/libros_bag_gui.so DESTINATION lib)
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64|arm64)$")
+  message("Detected architecture: arm64")
+  install(FILES arm64/libfile_selector.so DESTINATION lib)
+  install(FILES arm64/libros_bag_gui.so DESTINATION lib)
+else()
+  message(WARNING "Unknown architecture: ${CMAKE_SYSTEM_PROCESSOR}")
+endif()
+
 install(DIRECTORY launch 
   DESTINATION share/${PROJECT_NAME})
 
